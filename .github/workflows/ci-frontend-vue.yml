@@ -58,6 +58,7 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git pull
         git add ./gitops/frontend-vue/overlays/dev/kustomization.yaml
         git commit -m "Update frontend-vue-deployment.yaml with tag $TAG"
         git push
